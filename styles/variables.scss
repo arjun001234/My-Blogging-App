@@ -1,0 +1,44 @@
+$primary-bg-color: hsl(245,96%,15%);
+$secondary-bg-color: hsl(0,0%,100%);
+$black-color: #000;
+$large-font: 28px;
+$heading-font: 24px;
+$text-font: 18px;
+$primary-font: 'Open Sans';
+$secondary-font: 'Crimson Text';
+$primary-transition: all 0.5s ease;
+$primary-icon-scale: scale(1.5);
+
+@mixin absolutePosition($top,$left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin verticalFlexAlign {
+  display: flex;
+  align-items: center;
+}
+
+@mixin getTextStyle($size,$color,$weight,$family) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $family;
+}
+
+@mixin dimensions($height: auto,$width: auto,$min-height: auto,$min-width: auto){
+  height: $height;
+  width: $width;
+  min-height: $min-height;
+  min-width: $min-width;
+};
+
+@mixin primaryHover($bg-color,$color){
+    background-color: $bg-color;
+    color: $color;
+}

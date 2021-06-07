@@ -1,0 +1,24 @@
+@import '../../styles/variables';
+
+.container{
+    position: fixed;
+    height: 50px;
+    left: 0%;
+    right: 0%;
+    transition: all ease-in-out 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 20px;
+    p{
+        color: #fff;
+        font-size: 24px;
+        font-family: 'Open Sans';
+    }
+}
+
+@media only screen and (max-width: 600px) { 
+    .container{
+        width: 100%;
+    }
+}
