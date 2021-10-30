@@ -23,8 +23,8 @@ const PostDetailContent : React.FC<PostDetailsContentProps> = ({data}) => {
     const customRenderer : Components = {
         p(p){
             const {node} = p;
-            if(node.children[0].tagName as string === 'img'){
-                const imageElm = node.children[0].properties as {src: string,alt: string};
+            if(node.children[0].type as string === 'image'){
+                const imageElm = node.children[0] as any;
                 return(
                     <div className={classes.In_Blog_image}>
                         <Image src={imageElm.src} width={400} height={500}  />
