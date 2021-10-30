@@ -3,13 +3,13 @@ import { GetStaticProps } from "next";
 import React from "react";
 import PostContainer from "../components/post/container";
 import { HomePageProps } from '../types/types';
-import { AppContext } from '../context/contextApi';
 import Head from 'next/head';
 import MyDetails from '../components/user/details';
+import { AppContext } from '../context/contextApi';
 
 const Home : React.FC<HomePageProps> = ({data}) => {
 
-  const{ handleCloseNavBar } = React.useContext(AppContext)
+  const { handleCloseNavBar } = React.useContext(AppContext);
 
   React.useEffect(() => {
       handleCloseNavBar();
@@ -17,10 +17,6 @@ const Home : React.FC<HomePageProps> = ({data}) => {
 
   return (
     <>
-      <Head>
-        <title>Arjun Blogs</title>
-        <meta name='Description' content='All Kinds of Web Dev Blogs'/>
-      </Head>
       <MyDetails />
       <PostContainer data={data} />
     </>

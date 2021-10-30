@@ -1,16 +1,15 @@
 import fs from 'fs';
 import React from 'react'
 import PostDetails from '../../components/post/post-details/postDetails';
-import { useRouter } from 'next/router';
 import { getPost,postDirectory } from '../../utils/posts-utils';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { SinglePostProps, staticPathsType } from '../../types/types';
-import { AppContext } from '../../context/contextApi';
 import Head from 'next/head';
+import { AppContext } from '../../context/contextApi';
 
 const SinglePost : React.FC<SinglePostProps> = ({data}) => {
 
-    const{ handleCloseNavBar } = React.useContext(AppContext)
+    const { handleCloseNavBar } = React.useContext(AppContext);
 
     React.useEffect(() => {
         handleCloseNavBar();
@@ -36,7 +35,8 @@ export const getStaticProps : GetStaticProps = async (context) => {
     return {
         props: {
             data: data
-        }
+        },
+        revalidate: 600
     }
 }
 
@@ -57,7 +57,7 @@ export const getStaticPaths : GetStaticPaths = async () => {
 
     return {
         paths: getPaths,
-        fallback: true
+        fallback: false
     }
 }
 

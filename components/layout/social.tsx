@@ -13,9 +13,12 @@ const Social : React.FC = () => {
         <div className="social-container"  style={{transform: !showDetails && 'rotateZ(-90deg)'}}>
             <section className='social-content'>
                 <CloseIcon className='icon' onClick={handleHideDetails} />
-                <FacebookIcon className='icon' />
-                <TwitterIcon className='icon' />
-                <GitHubIcon className='icon' />
+                <a target="_blank" href="https://www.facebook.com/arjun.kanojia.7906">
+                <FacebookIcon className='icon' /></a>
+                <a target="_blank" href="https://twitter.com/ARJUN70951256">
+                <TwitterIcon className='icon' /></a>
+                <a target="_blank" href="https://github.com/arjun001234">
+                <GitHubIcon className='icon' /></a>
             </section>
         </div>
     )

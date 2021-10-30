@@ -8,7 +8,7 @@ import { getAllPosts } from '../../utils/posts-utils';
 
 const AllPosts : React.FC<AllPostsProps> = ({data}) => {
 
-    const{ handleCloseNavBar } = React.useContext(AppContext)
+    const { handleCloseNavBar } = React.useContext(AppContext);
 
     React.useEffect(() => {
         handleCloseNavBar();
@@ -17,8 +17,8 @@ const AllPosts : React.FC<AllPostsProps> = ({data}) => {
     return (
         <>
             <Head>
-                <title>Arjun All Blogs</title>
-                <meta name='Description' content='All Kinds of Web Dev Blogs'/>
+                <title>Arjun All Blog Posts </title>
+                <meta name='Description' content='Web Dev Blogs'/>
             </Head>
             <PostContainer data={data} />
         </>
